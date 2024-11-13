@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="assets/images/bookicon.ico">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <main>
+        <img src="assets/images/cadastropage/mulher-cadastro1.svg" alt="Icone mulher sentada" class="mulher_sentada-login">
+        <img src="assets/images/cadastropage/mulher-cadastro2.svg" alt="Icone mulher caindo" class="mulher_caindo-login">
+        <div class="login">
+            <div class="login_instrucao">
+                <h1 class="login_instrucao-titulo">Faça o login do usuário</h1>
+                <h2 class="login_instrucao-texto">É simples e rápido</h2>
+                <a class="login_instrucao-botao" th:href="@{/}">Voltar</a>
+            </div>
+            <form action="perfil" method="post">
+            <div class="login_campo">
+                <h2 class="login_campo-titulo">Login</h2>
+                <div class="login_campo-email">
+                    <h3 class="login_campo-email-tit">E-mail</h3>
+                    <input type="text" class="cadastro_campo" name="email">
+                </div>
+                <div class="login_campo-senha">
+                    <h3 class="login_campo-senha-tit">Senha</h3>
+                    <input type="password" class="cadastro_campo" name="senha">
+                </div>
+                
+                <!-- Alerta do email ou senha inválida abaixo: (Não alterar propriedas com th:) -->
+					<div class="alert alert-warning" role="alert" th:text="${erro}" th:if="${erro != null}">
+					
+					</div>
+					
+                <button class="login_campo-botao" type="submit" >Confirmar</button>
+                
+                <dialog th:if="${erro == null}"> 
+                    <h2 class="titulo_pop-up">Login realizado com <br>sucesso!</h2>
+                    <div class="close_button"><button class="popup_button"><img src="assets/images/icone-verificado.svg" alt="Icone verificado"></button></div>
+                </dialog>
+                
+            </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="assets/script/popup.js"></script>
+
+</body>
+</html>

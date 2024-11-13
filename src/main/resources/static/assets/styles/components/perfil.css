@@ -1,0 +1,78 @@
+.area_perfil {
+    position: relative;
+    width: 1122px;
+    height: 630px;
+    background-image: url(/assets/images/perfilpage/background-perfil.svg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    margin-left: 9.94rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.area_perfil-usuario-icone,
+.area_perfil_devolucao,
+.area_perfil_emprestimo {
+    position: absolute;
+    z-index: 1;
+}
+ 
+.area_perfil-usuario-icone {
+    margin-left: 29.75rem;
+    margin-top: -2rem;
+}
+
+.area_perfil_usuario-nome {
+    text-align: center;
+    padding-top: 9rem;
+    font-size: 1.5rem;
+}
+
+.area_perfil_devolucao {
+    margin-left: 7.625rem;
+    margin-top: 12.375rem;
+}
+
+.area_perfil_emprestimo {
+    margin-left: 42.5rem;
+    margin-top: 6.625rem;
+}
+
+.area_perfil_devolucao-texto {
+    margin-left: 12.8125rem;
+    padding-top: 23rem;
+}
+
+.area_perfil_emprestimo-texto {
+    margin-left: 45rem;
+    margin-top: -2rem;
+}
+
+.area_perfil-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3.5rem 1rem 0 1rem;
+}
+
+.historico_button {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    border: solid 3px var(--branco);
+    padding: 1.5rem;
+    width: 280px;
+    border-radius: 40px;
+    margin: 0 4rem 0 4rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.historico_button:hover {
+    box-shadow: none;
+}
+
+.area_perfil-link {
+    text-decoration: none;
+    color: var(--branco);
+}

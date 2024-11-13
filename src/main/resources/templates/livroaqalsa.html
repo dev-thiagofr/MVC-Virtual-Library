@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Online</title>
+    <link rel="shortcut icon" href="assets/images/bookicon.ico">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/homepage/icone-livro.svg" alt="Icone Livro"></a>
+                <a class="home_button" th:href="@{/}">Biblioteca <br> Online</a>
+            </div>
+            <div class="menu_burguer">
+                <menu id="menu">
+                    <ul class="menu_itens">
+                        <li><a th:href="@{/livros}" class="item_menu border">Livros</a></li>
+                        <li><a th:href="@{/perfil}"  class="item_menu border">Perfil</a></li>
+                        <li><a th:href="@{/login}"  class="item_menu border">Login</a></li>
+                        <li><a th:href="@{/cadastro}"  class="item_menu">Cadastro</a></li>
+                    </ul>
+                </menu>
+                <i class="burguer" onclick="clickMenu()"><img src="assets/images/homepage/icone-menu.svg" alt="Icone Menu"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <a href="perfil.html"><img src="assets/images/devolucaopage/icone-usuario.svg" alt="Icone de usuário" class="icone_usuario"></a>
+        <div class="card_devolucao livro">
+            <div class="card_acervo-apresetacao">
+                <img src="assets/images/livroaqalsa/aqalsabordaarredondada.svg" alt="Capa do livro Antes que as luzes se apaguem" class="card_acervo-imagem">
+                <h3 class="card_acervo-texto">Unidades disponíveis: 2</h3>
+            </div>
+            <div class="card_acervo-descricao">
+                <h2 class="card_acervo-titulo">Antes que as luzes se apaguem</h2>
+                <h3 class="card_acervo-texto">Autor: Jay Asher</h3>
+                <h3 class="card_acervo-texto">Lançamento: 12 de junho de 2018</h3>
+                <h3 class="card_acervo-texto">Gênero: Drama</h3>
+                <h3 class="card_acervo-texto">Editora: Astral Cultural</h3>
+                <button class="card_cadastro-botao alugar">Alugar</button>
+                <dialog> 
+                    <h2 class="titulo_pop-up">Livro alugado com sucesso! Devolver até 20/02/2024</h2>
+                    <div class="close_button"><button class="popup_button"><img src="assets/images/icone-verificado.svg" alt="Icone verificado"></button></div>
+                </dialog>
+            </div>
+        </div>
+        <div class="botao_voltar"><a class="card_devolucao-botao voltar" th:href="@{/drama}" >Voltar</a></div>
+    </main>
+
+    <script src="assets/script/burguer.js"></script>
+    <script src="assets/script/popup.js"></script>
+</body>
+</html>

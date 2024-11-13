@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Online</title>
+    <link rel="shortcut icon" href="assets/images/bookicon.ico">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/homepage/icone-livro.svg" alt="Icone Livro"></a>
+                <a class="home_button" th:href="@{/}" >Biblioteca <br> Online</a>
+            </div>
+            <div class="menu_burguer">
+                <menu id="menu">
+                    <ul class="menu_itens">
+                        <li><a th:href="@{/livros}" class="item_menu border">Livros</a></li>
+                        <li><a th:href="@{/perfil}" class="item_menu border">Perfil</a></li>
+                        <li><a th:href="@{/login}" class="item_menu border">Login</a></li>
+                        <li><a th:href="@{/cadastro}" class="item_menu">Cadastro</a></li>
+                    </ul>
+                </menu>
+                <i class="burguer" onclick="clickMenu()"><img src="assets/images/homepage/icone-menu.svg" alt="Icone Menu"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div class="apresentação">
+                <h1 class="titulo_apresentacao">Nunca foi tão fácil emprestar um livro</h1>
+                <h2 class="subt_apresentacao sub1">Localize empréstimos ou faça um agora mesmo:</h2>
+                <h2 class="subt_apresentacao sub2">É rápido e fácil.</h2>
+                <div class="cadastro">
+                    <a class="botao_login" href="#">Digite o CPF ou  E-mail....</a>
+                    <a class="botao_cadastro" th:href="@{/cadastro}">Novo cadastro</a>
+                </div>
+            </div>
+            <div class="imagem">
+                <img src="assets/images/homepage/eclipse.svg" alt="Eclipse" class="imagem">
+                <img src="assets/images/homepage/mulher.svg" alt="Imagem mulher" class="imagem_sobreposta mulher">
+                <img src="assets/images/homepage/homem.svg" alt="Imagem homem" class="imagem_sobreposta homem">
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/script/burguer.js"></script>
+
+</body>
+</html>

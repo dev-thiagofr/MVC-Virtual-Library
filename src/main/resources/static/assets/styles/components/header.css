@@ -1,0 +1,54 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 3rem 2rem 3rem;
+}
+  
+.home_button {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.logo,
+.menu_itens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu_itens {
+    font-size: 1.5rem;
+}
+
+.burguer {
+    display: block;
+    cursor: pointer;
+}
+
+menu {
+    display: none;
+}
+
+.menu_burguer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.item_menu {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.border {
+    border-right: solid white 5px;
+    padding-right: 1rem;
+}
+
+.item_menu:hover {
+    color: var(--verde);
+}

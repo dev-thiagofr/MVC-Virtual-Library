@@ -1,0 +1,124 @@
+@import url(popup.css);
+
+.card_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card_texto {
+    display: flex;
+    flex-direction: column;
+    height: 590px;
+    width: 335px;
+    background-color: var(--verde-escuro);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card_texto-titulo,
+.card_texto-descricao,
+.card_texto-botao {
+    font-family: var(--fonte-secundaria);
+}
+
+.card_texto-titulo {
+    line-height: 3rem;
+    margin-top: 10.5rem;
+    padding: 0 1rem 0.5rem 2.5rem;
+}
+
+.card_texto-descricao {
+    font-size: 1rem;
+    padding: 0 2rem 10.5rem 2.5rem;
+}
+
+.card_texto-botao {
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--branco);
+    border: solid 3px var(--branco);
+    padding: 0.8rem;
+    border-radius: 15px;
+    margin: 1.5rem 4rem 0 4rem;
+    width: 156px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card_texto-botao:hover {
+    box-shadow: none;
+}
+
+.card_cadastro {
+    height: 590px;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    border-radius: 0 1rem 1rem 0;
+    color: var(--preto);
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    box-shadow: 8px 6px 4px rgba(0, 0, 0, 0.25);
+    padding-right: 3rem;
+}
+
+.card_cadastro-titulo {
+    font-family: var(--fonte-secundaria);
+    color: var(--verde-escuro);
+    font-size: 2rem;
+    text-align: center;
+    padding: 3.2rem 0 2rem 0;
+}
+
+.card_cadastro-campo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    padding: 0rem 0 2rem 0;
+}
+
+.cadastro_campo {
+    background-color: var(--branco-secundario);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 288px;
+    height: 40px;
+}
+
+.card_cadastro-botao {
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 0.8rem;
+    border-radius: 15px;
+    border: none;
+    margin-left: 13rem;
+    width: 156px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card_cadastro-botao:hover {
+    box-shadow: none;
+}
+
+.mulher_sentada {
+    position: absolute;
+    z-index: 1;
+    margin-top: 4rem;
+    margin-left: 14rem;
+}
+
+.mulher_caindo {
+    position: absolute;
+    z-index: 1;
+    margin-top: 44rem;
+    margin-left: 63rem;
+}

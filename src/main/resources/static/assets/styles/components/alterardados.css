@@ -1,0 +1,14 @@
+.card_wBg {
+    background-image: url(/assets/images/alterarpage/bg-alteracaoDeInfo.svg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.card_roxo-titulo {
+    color: var(--roxo-claro);
+    padding-bottom: 3rem;
+}
+
+.card_botao-roxo {
+    background-color: var(--roxo-claro);
+}

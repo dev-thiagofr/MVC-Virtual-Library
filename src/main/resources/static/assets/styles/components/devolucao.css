@@ -1,0 +1,63 @@
+.card_devolucao {
+    background-image: url(/assets/images/devolucaopage/bg-devolucao.svg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    width: 837px;
+    height: 540px;
+    margin-left: 18.75rem;
+    margin-top: 5rem;
+    align-items: center;
+}
+
+.card_devolucao-livro {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 8rem;
+}
+
+.card_devolucao-livro-tit {
+    padding-left: 2rem;
+}
+
+.icone_usuario {
+    position: absolute;
+    z-index: 1;
+    margin-left: 15.87rem;
+    margin-top: -3rem;
+}
+
+.icone_mulher {
+    position: absolute;
+    z-index: 1;
+    margin-left: 65.25rem;
+    margin-top: 13rem;
+}
+
+.card_devolucao-botao {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 25px;
+    color: var(--branco);
+    background-color: var(--verde-escuro);
+    width: 105px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card_devolucao-botao:hover {
+    box-shadow: none;
+}
+
+.botao_voltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.voltar {
+    border: 3px solid var(--branco);
+    width: 155px;
+}

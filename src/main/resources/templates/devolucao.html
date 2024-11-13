@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Online</title>
+    <link rel="shortcut icon" href="assets/images/bookicon.ico">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/homepage/icone-livro.svg" alt="Icone Livro"></a>
+                <a class="home_button" th:href="@{/}" >Biblioteca <br> Online</a>
+            </div>
+            <div class="menu_burguer">
+                <menu id="menu">
+                    <ul class="menu_itens">
+                        <li><a th:href="@{/livros}"  class="item_menu border">Livros</a></li>
+                        <li><a th:href="@{/perfil}"  class="item_menu border">Perfil</a></li>
+                        <li><a th:href="@{/login}"  class="item_menu border">Login</a></li>
+                        <li><a th:href="@{/cadastro}"  class="item_menu">Cadastro</a></li>
+                    </ul>
+                </menu>
+                <i class="burguer" onclick="clickMenu()"><img src="assets/images/homepage/icone-menu.svg" alt="Icone Menu"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <a href="perfil.html"><img src="assets/images/devolucaopage/icone-usuario.svg" alt="Icone de usuário" class="icone_usuario"></a>
+        <img src="assets/images/devolucaopage/mulher-deCostas.svg" alt="Icone mulher de costas" class="icone_mulher">
+        <div class="card_devolucao">
+            <div class="card_devolucao-livro">
+                <img src="assets/images/devolucaopage/icone-livro.svg" alt="Icone de livro">
+                <h2 class="card_devolucao-livro-tit">Neuromancer</h2>
+                <a class="card_devolucao-botao devolver" href="#">Devolver</a>
+            </div>
+            <div class="card_devolucao-livro">
+                <img src="assets/images/devolucaopage/icone-livro.svg" alt="Icone de livro">
+                <h2 class="card_devolucao-livro-tit">O homem de giz</h2>
+                <a class="card_devolucao-botao devolver" href="#">Devolver</a>
+            </div>
+        </div>
+        <div class="botao_voltar"><a class="card_devolucao-botao voltar" th:href="@{/perfil}" >Voltar</a></div>
+    </main>
+
+    <script src="assets/script/burguer.js"></script>
+
+</body>
+</html>

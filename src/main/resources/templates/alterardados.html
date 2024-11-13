@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar informações</title>
+    <link rel="shortcut icon" href="assets/images/bookicon.ico">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <main>
+        <img src="assets/images/cadastropage/mulher-cadastro1.svg" alt="Icone mulher sentada" class="mulher_sentada">
+        <img src="assets/images/cadastropage/mulher-cadastro2.svg" alt="Icone mulher caindo" class="mulher_caindo">
+        <div class="card_login">
+            <div class="card_texto card_wBg">
+                <h1 class="card_texto-titulo">Alteração de informações </h1>
+                <h2 class="card_texto-descricao card_descricao-alt">Mantenha sempre os dados atualizados</h2>
+                <a class="card_texto-botao" th:href="@{/perfil}" >Voltar</a>
+            </div>
+            <form method="post" action="alterando" th:object="${usuarioLogado}" >
+            <div class="card_cadastro">
+                <h2 class="card_cadastro-titulo card_roxo-titulo">Informações de contato</h2>
+                <div class="card_cadastro-campo">
+	                    <h3 class="card_cadastro-texto">Nome completo</h3>
+                    <input type="text" class="cadastro_campo"  th:field="*{nome}" >
+                </div>
+                <div class="card_cadastro-campo">
+                    <h3 class="card_cadastro-texto">Data de nascimento</h3>
+                    <input type="date" placeholder="" class="cadastro_campo" th:field="*{nasc}">
+                </div>
+                <div class="card_cadastro-campo">
+                    <h3 class="card_cadastro-texto">Endereço</h3>
+                    <input type="text" class="cadastro_campo" th:field="*{end}" >
+                </div>
+                <div class="card_cadastro-campo">
+                    <h3 class="card_cadastro-texto">E-mail</h3>
+                    <input type="text" class="cadastro_campo" th:field="*{email}" >
+                </div>
+                <div class="card_cadastro-campo">
+                    <h3 class="card_cadastro-texto">Senha</h3>
+                    <input type="password" class="cadastro_campo" th:field="*{senha}">
+                </div>
+                <button class="card_cadastro-botao card_botao-roxo">Confirmar</button>
+                <dialog> 
+                    <h2 class="titulo_pop-up">Informações alteradas com sucesso!</h2>
+                    <div class="close_button"><button class="popup_button"><img src="assets/images/icone-verificado.svg" alt="Icone verificado"></button></div>
+                </dialog>
+
+            </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="assets/script/popup.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+    <link rel="shortcut icon" href="assets/images/bookicon.ico">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/homepage/icone-livro.svg" alt="Icone Livro"></a>
+                <a class="home_button" th:href="@{/}">Biblioteca <br> Online</a>
+            </div>
+            <div class="menu_burguer">
+                <menu id="menu">
+                    <ul class="menu_itens">
+                        <li><a th:href="@{/livros}"  class="item_menu border">Livros</a></li>
+                        <li><a th:href="@{/perfil}"  class="item_menu border">Perfil</a></li>
+                        <li><a th:href="@{/login}"  class="item_menu border">Login</a></li>
+                        <li><a th:href="@{/cadastro}"  class="item_menu">Cadastro</a></li>
+                    </ul>
+                </menu>
+                <i class="burguer" onclick="clickMenu()"><img src="assets/images/homepage/icone-menu.svg" alt="Icone Menu"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="livro_apresentacao">
+            <h1 class="livro_titulo">DRAMA</h1>
+        </section>
+        <section class="acervo_livros">
+            <div class="card_container">
+                <div class="card_livro um">
+                    <img class="card_livro-img" src="assets/images/dramapage/alivrariadosachadoseperdidos_resized.jpg" alt="">
+                    <h2 class="card_livro-titulo">A Livraria dos Achados e Perdidos</h2>
+                    <h3 class="card_livro-autor">Wiggs, Susan</h3>
+                </div>
+                <a th:href="@{/livroaqalsa}"  class="link_livro-acervo">
+                    <div class="card_livro dois">
+                        <img class="card_livro-img" src="assets/images/dramapage/antesqueasluzesseapaguem_resized.jpg" alt="">
+                        <h2 class="card_livro-titulo">Antes que as luzes se apaguem</h2>
+                        <h3 class="card_livro-autor">Asher, Jay</h3>
+                    </div>
+                </a>
+                <div class="card_livro tres">
+                    <img class="card_livro-img" src="assets/images/dramapage/eassimqueacaba_resized.jpg" alt="">
+                    <h2 class="card_livro-titulo">É Assim que Acaba: 1</h2>
+                    <h3 class="card_livro-autor">Hoover, Colleen</h3>
+                </div>
+                <div class="card_livro quatro">
+                    <img class="card_livro-img" src="assets/images/dramapage/eassimquecomeca_resized.jpg" alt="">
+                    <h2 class="card_livro-titulo">É assim que começa (Vol. 2 É assim que acaba)</h2>
+                    <h3 class="card_livro-autor">Hoover, Colleen </h3>
+
+                </div>
+                <div class="card_livro cinco">
+                    <img class="card_livro-img" src="assets/images/dramapage/ossetemaridosdeevelynhugo_resized.jpg" alt="">
+                    <h2 class="card_livro-titulo">Os sete maridos de Evelyn Hugo</h2>
+                    <h3 class="card_livro-autor">Reid, Taylor Jenkins</h3>
+                </div>
+                <div class="card_livro seis">
+                    <img class="card_livro-img" src="assets/images/dramapage/todasassuasimperfeicoes_resized.jpg" alt="">
+                    <h2 class="card_livro-titulo">Todas as suas (im)perfeições</h2>
+                    <h3 class="card_livro-autor">Hoover, Colleen</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/script/burguer.js"></script>
+</body>
+</html>
