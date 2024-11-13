@@ -6,10 +6,10 @@ The project is a prototype of a virtual library, developed with the Spring frame
 
 ## Programming Languages Used
 
-HTML/CSS - Language used for the front end <br>
-Spring Framework - Back-end development <br>
-Maven - Dependency manager<br>
-MySQL - Database used<br>
+- HTML/CSS - Language used for the front end <br>
+- Spring Framework - Back-end development <br>
+- Maven - Dependency manager<br>
+- MySQL - Database used<br>
 
 
 ## Developers
