@@ -31,3 +31,25 @@ O projeto é um protótipo de uma biblioteca virtual, desenvolvido com o framewo
 2. Spring Tool Suite
    
 3. Criação de Tabelas: Execute o script create_table_biblioteca.sql para criar todas as tabelas necessárias para o funcionamento do projeto.
+
+## Instruções para inicializar o projeto no Spring Tool Suite:
+
+Abrir o Projeto: Abra o projeto no Spring Tool Suite (STS).
+
+ - Acessar "Run Configuration": Clique na seta ao lado do botão de execução ▶️ e selecione "Run Configuration...".]
+  
+Criar Configuração Maven:
+
+ - No menu à esquerda, clique duas vezes em Maven Build para criar uma nova configuração.
+
+Configurar Diretório do Projeto:
+
+ - Em "Base Directory", insira o diretório onde o projeto está localizado.
+
+Definir Objetivo (Goals):
+
+ - No campo "Goals", digite: spring-boot:run.
+
+Iniciar o Projeto:
+
+ - Clique em Run ou Apply para salvar a configuração e iniciar o projeto.
