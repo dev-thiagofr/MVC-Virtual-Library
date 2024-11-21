@@ -28,4 +28,6 @@ O projeto é um protótipo de uma biblioteca virtual, desenvolvido com o framewo
 
 1. Banco de Dados MySQL: Certifique-se de que o MySQL esteja instalado e configurado na máquina.
 
-2. Criação de Tabelas: Execute o script create_table_biblioteca.sql para criar todas as tabelas necessárias para o funcionamento do projeto.
+2. Spring Tool Suite
+   
+3. Criação de Tabelas: Execute o script create_table_biblioteca.sql para criar todas as tabelas necessárias para o funcionamento do projeto.
