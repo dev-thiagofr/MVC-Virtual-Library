@@ -48,7 +48,7 @@ Configurar Diretório do Projeto:
 
 Definir Objetivo (Goals):
 
- - No campo "Goals", digite: spring-boot:run.
+ - No campo "Goals", digite: spring-boot:run
 
 Iniciar o Projeto:
 
