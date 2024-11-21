@@ -1,18 +1,18 @@
 
-# MVC Virtual Library
+# Biblioteca Virtual MVC
 
-The project is a prototype of a virtual library, developed with the Spring framework following the MVC pattern. It uses HTML pages and leverages other components of the tool to ensure an efficient and functional structure.
-
-
-## Programming Languages Used
-
-- HTML/CSS - Language used for the front end <br>
-- Spring Framework - Back-end development <br>
-- Maven - Dependency manager<br>
-- MySQL - Database used<br>
+O projeto é um protótipo de uma biblioteca virtual, desenvolvido com o framework Spring seguindo o padrão MVC. Ele utiliza páginas HTML e aproveita outros componentes da ferramenta para garantir uma estrutura eficiente e funcional.
 
 
-## Developers
+## Linguagens de Programação Utilizadas
+
+- HTML/CSS - Linguagem utilizada para o front-end. <br>
+- Spring Framework - Desenvolvimento do back-end. <br>
+- Maven - Gerenciador de dependências. <br>
+- MySQL - Banco de dados utilizado.<br>
+
+
+## Desenvolvedores
 
 - [@Arthur Ferreira Costa  ](https://github.com/devArthurF) - Front End Dev
 
@@ -20,4 +20,12 @@ The project is a prototype of a virtual library, developed with the Spring frame
 
 - [@Rayssa Lima  ](https://github.com/limarayssa) - Back End Dev
 
+- [@Vitor de Oliveira Silva  ](https://github.com/VitorOliveira057) - Back End Dev
+
 - [@Emerson Paduan  ](https://github.com/paduandev) - Project Dean
+
+## Requisitos
+
+1. Banco de Dados MySQL: Certifique-se de que o MySQL esteja instalado e configurado na máquina.
+
+2. Criação de Tabelas: Execute o script create_table_biblioteca.sql para criar todas as tabelas necessárias para o funcionamento do projeto.
