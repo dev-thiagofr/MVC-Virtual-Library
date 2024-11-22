@@ -10,14 +10,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.bibliotecaA3.dao.UsuarioDao;
 import br.com.bibliotecaA3.model.Usuario;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @Controller
+@Api(tags = "UsuarioController")
 public class UsuarioController {
 	
 	@Autowired
 	private UsuarioDao usuariorepositorio;
 	
 	@GetMapping("/cadastro")
+	@ApiOperation(value = "Cadastra o usuário", notes = "Endpoint cadastra usuário.")
 	public ModelAndView cadastrar(Usuario usuario) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("cadastro");
