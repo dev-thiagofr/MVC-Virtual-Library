@@ -39,3 +39,8 @@
     align-self: flex-end;
     margin-right: 5.25rem;
 }
+
+.card_acervo-imagem {
+	border-radius: 20%;
+}
+

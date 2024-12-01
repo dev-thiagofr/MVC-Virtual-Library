@@ -40,11 +40,11 @@
                 <h3 class="card_acervo-texto">Unidades disponíveis: 2</h3>
             </div>
             <div class="card_acervo-descricao">
-                <h2 class="card_acervo-titulo">Antes que as luzes se apaguem</h2>
-                <h3 class="card_acervo-texto">Autor: Jay Asher</h3>
+                <h2 class="card_acervo-titulo" th:text="${livro.titulo}"></h2>
+                <!-- <h3 class="card_acervo-texto">Autor: Jay Asher</h3>
                 <h3 class="card_acervo-texto">Lançamento: 12 de junho de 2018</h3>
                 <h3 class="card_acervo-texto">Gênero: Drama</h3>
-                <h3 class="card_acervo-texto">Editora: Astral Cultural</h3>
+                <h3 class="card_acervo-texto">Editora: Astral Cultural</h3> -->
                 <button class="card_cadastro-botao alugar">Alugar</button>
                 <dialog> 
                     <h2 class="titulo_pop-up">Livro alugado com sucesso! Devolver até 20/02/2024</h2>

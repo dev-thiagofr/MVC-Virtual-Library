@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.bind.annotation.RestController;
 
 import br.com.bibliotecaA3.dao.UsuarioDao;
 import br.com.bibliotecaA3.model.Usuario;
 import jakarta.servlet.http.HttpSession;
 
-@RestController
+@Controller
 public class LoginController {
 	
 	@Autowired

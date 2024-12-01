@@ -16,7 +16,7 @@
         <nav>
             <div class="logo">
                 <a href="index.html"><img src="assets/images/homepage/icone-livro.svg" alt="Icone Livro"></a>
-                <a class="home_button" th:href="@{/}" >Biblioteca <br> Online</a>
+                <a class="home_button" th:href="@{/perfil}" >Biblioteca <br> Online</a>
             </div>
             <div class="menu_burguer">
                 <menu id="menu">
@@ -38,7 +38,7 @@
                 <h2 class="subt_apresentacao sub1">Localize empréstimos ou faça um agora mesmo:</h2>
                 <h2 class="subt_apresentacao sub2">É rápido e fácil.</h2>
                 <div class="cadastro">
-                    <a class="botao_login" href="#">Digite o CPF ou  E-mail....</a>
+                    <a class="botao_login" th:href="@{/login}">Faça login!</a>
                     <a class="botao_cadastro" th:href="@{/cadastro}">Novo cadastro</a>
                 </div>
             </div>
