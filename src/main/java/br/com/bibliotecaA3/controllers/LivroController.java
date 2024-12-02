@@ -7,12 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import br.com.bibliotecaA3.dao.LivroDao;
 import br.com.bibliotecaA3.model.Livro;
 import br.com.bibliotecaA3.service.LivroArvore;
-import jakarta.annotation.PostConstruct;
+
 
 @Controller
 public class LivroController {
@@ -39,19 +38,19 @@ public class LivroController {
 	        carregarLivrosNaArvore();
 	        
 	        if (titulo != null && !titulo.trim().isEmpty()) {
-	            // Verifica se o livro existe na árvore
+	            // Verifica se o livro existe
 	            Livro livro = arvoreLivros.getLivroPorTitulo(titulo);
 	            if (livro != null) {
 	                // Passa o livro para o modelo
 	                model.addAttribute("livro", livro);
-	                return "detalheslivro";  // Página de detalhes do livro
+	                return "detalheslivro"; 
 	            } else {
 	                model.addAttribute("resultado", "Livro não encontrado.");
 	            }
 	        }
 	        
 	        model.addAttribute("resultado", "Título não encontrado.");
-	        return "livros";  // Página de busca de livros
+	        return "livros";  
 	    }
 	    
 	    // Página para mostrar os detalhes de um livro
@@ -63,10 +62,10 @@ public class LivroController {
 	        Livro livro = arvoreLivros.getLivroPorTitulo(titulo);
 	        if (livro != null) {
 	            model.addAttribute("livro", livro);
-	            return "detalheslivro";  // Retorna a página de detalhes
+	            return "detalheslivro";
 	        } else {
 	            model.addAttribute("resultado", "Livro não encontrado.");
-	            return "livros";  // Caso o livro não exista
+	            return "livros";
 	        }
 	    }
 }

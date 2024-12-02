@@ -71,7 +71,7 @@ public class LivroArvore {
             int comparison = aux.compareTo(title);
 
             if (comparison == 0) {
-                return aux.getLivro(); // Retorna o livro encontrado
+                return aux.getLivro();
             }
 
             if (comparison > 0) {
@@ -80,7 +80,7 @@ public class LivroArvore {
                 aux = aux.getRight();
             }
         }
-        return null; // Caso o livro não seja encontrado
+        return null; 
     }
 
    
