@@ -27,13 +27,13 @@ insert into usuario (id, email, end, nasc, nome, senha) values
 (6, '444444444@ulife.com.br', 'R. seteoito, 205', '2002-03-03', 'Fernanda Palermo', 'senha456'),
 (7, '555555555@ulife.com.br', 'R. novedez, 206', '1998-05-05', 'Ariel Godói', 'senha567');
 
-insert into livro (isbn, data_lanc, titulo, cod_autor_id, cod_editora_id, cod_gen_id) values 
-(1132, '2020-11-16', 'A Livraria dos Achados e Perdidos', 1, 5, 2),
-(7107, '2018-06-12', 'Antes que as luzes se apaguem', 2, 2, 2),
-(2514, '2016-02-29', 'É assim que acaba: 1', 3, 2, 2),
-(1397, '2022-10-18', 'É assim que começa (Vol.2 É assim que acaba)', 3, 2, 2),
-(7915, '2018-07-17', 'Todas as suas (im)perfeições', 3, 5, 2),
-(5737, '2017-06-13', 'Os sete maridos de Evenlyn Hugo', 4, 1, 2);
+insert into livro (isbn, data_lanc, titulo, qtd_disp, image_dir, descr, cod_autor_id, cod_editora_id, cod_gen_id) values 
+(1132, '2020-11-16', 'A Livraria dos Achados e Perdidos', 5, 'assets/images/dramapage/alivrariadosachadoseperdidos_resized.jpg', 'Capa de A Livraria dos Achados e Perdidos', 1, 5, 2),
+(7107, '2018-06-12', 'Antes que as luzes se apaguem', 4, 'assets/images/livroaqalsa/aqalsabordaarredondada.svg', 'Capa de Antes que as luzes se apaguem', 2, 2, 2),
+(2514, '2016-02-29', 'É assim que acaba: 1', 5, 'assets/images/dramapage/eassimqueacaba_resized.jpg', 'Capa de É assim que acaba: 1', 3, 2, 2),
+(1397, '2022-10-18', 'É assim que começa (Vol.2 É assim que acaba)', 1, 'assets/images/dramapage/eassimquecomeca_resized.jpg', 'Capa de É assim que começa (Vol.2 É assim que acaba)', 3, 2, 2),
+(7915, '2018-07-17', 'Todas as suas (im)perfeições', 3, 'assets/images/dramapage/todasassuasimperfeicoes_resized.jpg', 'Capa de Todas as suas (im)perfeições', 3, 5, 2),
+(5737, '2017-06-13', 'Os sete maridos de Evenlyn Hugo', 7, 'assets/images/dramapage/ossetemaridosdeevelynhugo_resized.jpg', 'Capa de Os sete maridos de Evenlyn Hugo', 4, 1, 2);
 
 insert into emprestimo (id, data_fim, data_ini, fk_livro_isbn, fk_usuario_id) values 
 (1, '2023-05-15', '2023-05-15', 7107, 4),

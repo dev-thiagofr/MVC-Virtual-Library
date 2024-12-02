@@ -1,0 +1,71 @@
+package br.com.bibliotecaA3.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import br.com.bibliotecaA3.dao.LivroDao;
+import br.com.bibliotecaA3.model.Livro;
+import br.com.bibliotecaA3.service.LivroArvore;
+
+
+@Controller
+public class LivroController {
+	
+	 @Autowired
+	    private LivroDao livroRepository;
+
+	 	private LivroArvore arvoreLivros = new LivroArvore();
+	    private boolean load = false;
+
+	    private void carregarLivrosNaArvore() {
+	        if (!load) {
+	            List<Livro> livros = livroRepository.buscaLivros();
+	            for (Livro livro : livros) {
+	                arvoreLivros.add(livro);
+	            }
+	            load = true;
+	        }
+	    }
+
+	    // Método de busca de livros
+	    @GetMapping("/buscarLivro")
+	    public String buscarLivro(@RequestParam String titulo, Model model) {
+	        carregarLivrosNaArvore();
+	        
+	        if (titulo != null && !titulo.trim().isEmpty()) {
+	            // Verifica se o livro existe
+	            Livro livro = arvoreLivros.getLivroPorTitulo(titulo);
+	            if (livro != null) {
+	                // Passa o livro para o modelo
+	                model.addAttribute("livro", livro);
+	                return "detalheslivro"; 
+	            } else {
+	                model.addAttribute("resultado", "Livro não encontrado.");
+	            }
+	        }
+	        
+	        model.addAttribute("resultado", "Título não encontrado.");
+	        return "livros";  
+	    }
+	    
+	    // Página para mostrar os detalhes de um livro
+	    @GetMapping("/detalheLivro")
+	    public String detalheLivro(@RequestParam String titulo, Model model) {
+	        carregarLivrosNaArvore();
+	        
+	        // Procura o livro pelo título
+	        Livro livro = arvoreLivros.getLivroPorTitulo(titulo);
+	        if (livro != null) {
+	            model.addAttribute("livro", livro);
+	            return "detalheslivro";
+	        } else {
+	            model.addAttribute("resultado", "Livro não encontrado.");
+	            return "livros";
+	        }
+	    }
+}
