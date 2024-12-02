@@ -10,7 +10,7 @@ public class LivroArvore {
         return root == null;
     }
 
-    // Método de adicionar um livro
+    //método de adicionar um livro na árvore
     public boolean add(Livro livro) {
         LivroNode newNode = new LivroNode(livro);
 
@@ -62,6 +62,25 @@ public class LivroArvore {
             }
         }
         return false; 
+    }
+    
+    // Método para obter um livro pelo título
+    public Livro getLivroPorTitulo(String title) {
+        LivroNode aux = root;
+        while (aux != null) {
+            int comparison = aux.compareTo(title);
+
+            if (comparison == 0) {
+                return aux.getLivro(); // Retorna o livro encontrado
+            }
+
+            if (comparison > 0) {
+                aux = aux.getLeft();
+            } else {
+                aux = aux.getRight();
+            }
+        }
+        return null; // Caso o livro não seja encontrado
     }
 
    

@@ -38,16 +38,35 @@ public class LivroController {
 	    public String buscarLivro(@RequestParam String titulo, Model model) {
 	        carregarLivrosNaArvore();
 	        
-	        String result = "";
-	        
 	        if (titulo != null && !titulo.trim().isEmpty()) {
 	            // Verifica se o livro existe na árvore
-	            boolean existe = arvoreLivros.exists(titulo);
-	            result = existe ? "Titulo: " + titulo : "Livro não encontrado.";
-	            
+	            Livro livro = arvoreLivros.getLivroPorTitulo(titulo);
+	            if (livro != null) {
+	                // Passa o livro para o modelo
+	                model.addAttribute("livro", livro);
+	                return "detalheslivro";  // Página de detalhes do livro
+	            } else {
+	                model.addAttribute("resultado", "Livro não encontrado.");
+	            }
 	        }
-
-	        model.addAttribute("resultado", result);
-	        return "livros";  
+	        
+	        model.addAttribute("resultado", "Título não encontrado.");
+	        return "livros";  // Página de busca de livros
+	    }
+	    
+	    // Página para mostrar os detalhes de um livro
+	    @GetMapping("/detalheLivro")
+	    public String detalheLivro(@RequestParam String titulo, Model model) {
+	        carregarLivrosNaArvore();
+	        
+	        // Procura o livro pelo título
+	        Livro livro = arvoreLivros.getLivroPorTitulo(titulo);
+	        if (livro != null) {
+	            model.addAttribute("livro", livro);
+	            return "detalheslivro";  // Retorna a página de detalhes
+	        } else {
+	            model.addAttribute("resultado", "Livro não encontrado.");
+	            return "livros";  // Caso o livro não exista
+	        }
 	    }
 }

@@ -46,13 +46,12 @@
 		  </div>
 		  <center th:if="${resultado}">
 			<div class="result" id="resultadoBusca">
-				<!-- <p th:text="${resultado}">resultado</p>   -->
 		    <ul>
 		      <p>Resultado</p>
 		      <li>
-		        <a href="" th:text="${resultado}"
-		          >
-		        </a>
+		        <p href="@{/detalheslivro(titulo=${resultado})}" th:if="${resultado != 'Livro não encontrado.'}"
+		          >Resultado não encontrado
+		        </p>
 		      </li>
 		      </ul>
 		    </div>
