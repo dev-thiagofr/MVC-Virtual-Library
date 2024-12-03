@@ -24,6 +24,8 @@ O projeto é um protótipo de uma biblioteca virtual, desenvolvido com o framewo
 
 - [@Emerson Paduan  ](https://github.com/paduandev) - Project Dean
 
+- [@Augusto Mendes  ] augusto.gomes@ulife.com.br - Project Dean
+
 ## Requisitos
 
 1. Banco de Dados MySQL: Certifique-se de que o MySQL esteja instalado e configurado na máquina.
