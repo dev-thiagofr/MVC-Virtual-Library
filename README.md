@@ -24,7 +24,7 @@ O projeto é um protótipo de uma biblioteca virtual, desenvolvido com o framewo
 
 - [@Emerson Paduan  ](https://github.com/paduandev) - Project Dean
 
-- [@Augusto Mendes  ] augusto.gomes@ulife.com.br - Project Dean
+- [@Augusto Mendes ] (augusto.gomes@ulife.com.br) - Project Dean
 
 ## Requisitos
 
@@ -32,7 +32,7 @@ O projeto é um protótipo de uma biblioteca virtual, desenvolvido com o framewo
 
 2. Spring Tool Suite
    
-3. Criação de Tabelas: Execute o script create_table_biblioteca.sql para criar todas as tabelas necessárias para o funcionamento do projeto.
+3. Criação de Tabelas: Execute o script create_table_biblioteca.sql e importA3 para criar todas as tabelas necessárias para o funcionamento do projeto.
 
 ## Instruções para inicializar o projeto no Spring Tool Suite:
 
